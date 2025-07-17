@@ -5,7 +5,8 @@ fun main() {
     println("Promedio: $promedio")
 
     // Ejercicio 2: Filtrar impares
-    val impares = numeros.filter { it % 2 != 0 }
+    val listaNumeros = listOf(1,2,3,4,5,6,7,8,9,10)
+    val impares = listaNumeros.filter { it % 2 != 0 }
     println("Números impares: $impares")
 
     // Ejercicio 3: isPalindrome
@@ -46,6 +47,10 @@ fun isPalindrome(text: String) = text == text.reversed()
 
 fun performOperation(a: Int, b: Int, operacion: (Int, Int) -> Int): Int {
     return operacion(a, b)
+}
+
+data class Person(val name: String, val age: Int, val gender: String)
+data class Student(val name: String, val age: Int, val gender: String, val studentId: String)
 }
 
 data class Person(val name: String, val age: Int, val gender: String)
